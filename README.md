@@ -1,6 +1,6 @@
 ––––––––––––––––––––––––––––––––––
 
-Notifications Service (Mock)
+Notifications Service (Mock) v1.0
 
 Shared REST microservice for rendering notification templates and auditing simulated SMS/Email sends.
 
@@ -12,9 +12,21 @@ This service provides a single /send endpoint that accepts a JSON payload, rende
 
 It acts as a centralised notification service for all group systems.
 
+This service is language-agnostic. Any system capable of making an HTTP request can integrate with it, regardless of programming language or framework.
+
 ⸻
 
 API Contract
+
+Any module that needs to notify a user or staff member should make an HTTP POST request to the /send endpoint.
+
+Your system does not need to implement email, SMS, or message formatting logic.
+
+Instead, you send the required data to the Notifications service and it will:
+
+• Choose Email or SMS based on stored user preference
+• Render the final message using a predefined template
+• Record a permanent audit log of the message
 
 POST /send
 
@@ -68,7 +80,7 @@ Variables: name, code
 invoice_ready
 Variables: name, invoice_id, total
 
-If a new template is needed, contact the Notifications module owner.
+If a new template is needed, contact @fadi 
 
 ⸻
 
