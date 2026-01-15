@@ -6,7 +6,7 @@ Shared REST microservice for rendering notification templates and auditing simul
 
 ⸻
 
-What this is
+What this is:
 
 This service provides a single /send endpoint that accepts a JSON payload, renders a predefined template using variable data, determines whether the recipient prefers SMS or Email, and records the final message to a local SQLite database (audit_log.db) instead of actually sending it.
 
@@ -16,7 +16,13 @@ This service is language-agnostic. Any system capable of making an HTTP request 
 
 ⸻
 
-API Contract
+Who needs to install this?
+
+Only teams who are running a local copy of the Notifications service need to install the dependencies listed in requirements.txt.
+
+Teams that are simply calling the /send API from their own systems do not need to install anything, they only need to make an HTTP request to the running service.
+
+API Contract:
 
 Any module that needs to notify a user or staff member should make an HTTP POST request to the /send endpoint.
 
@@ -48,7 +54,7 @@ Success Response:
 
 ⸻
 
-Running Locally
+Running Locally:
 
 python3 -m venv .venv
 source .venv/bin/activate
@@ -61,7 +67,7 @@ http://127.0.0.1:5050
 
 ⸻
 
-Health Check
+Health Check:
 
 curl http://127.0.0.1:5050/health
 
@@ -84,7 +90,7 @@ If a new template is needed, contact @fadi
 
 ⸻
 
-Database
+Database:
 
 SQLite file: audit_log.db
 Schema defined in schema.sql
@@ -95,7 +101,7 @@ audit_log
 
 ⸻
 
-Notes
+Notes:
 
 This service mocks sending behaviour. No real SMS or Email is sent. All messages are recorded for audit and debugging purposes.
 ––––––––––––––––––––––––––––––––––
