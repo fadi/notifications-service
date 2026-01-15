@@ -2,7 +2,7 @@
 
 Shared REST microservice for rendering notification templates and auditing simulated SMS/Email sends.
 
-## What this is
+## What this is:
 
 This service provides a single /send endpoint that accepts a JSON payload, renders a predefined template using variable data, determines whether the recipient prefers SMS or Email, and records the final message to a local SQLite database (audit_log.db) instead of actually sending it.
 
@@ -16,7 +16,7 @@ Only teams who are running a local copy of the Notifications service need to ins
 
 Teams that are simply calling the /send API from their own systems do not need to install anything - they only need to make an HTTP request to the running service.
 
-## API Contract
+## API Contract:
 
 Any module that needs to notify a user or staff member should make an HTTP POST request to the /send endpoint.
 
