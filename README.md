@@ -14,7 +14,7 @@ This service is language-agnostic. Any system capable of making an HTTP request 
 
 Only teams who are running a local copy of the Notifications service need to install the dependencies listed in requirements.txt.
 
-Teams that are simply calling the /send API from their own systems do not need to install anything — they only need to make an HTTP request to the running service.
+Teams that are simply calling the /send API from their own systems do not need to install anything - they only need to make an HTTP request to the running service.
 
 ## API Contract
 
