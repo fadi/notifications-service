@@ -91,10 +91,14 @@ Available templates:
 
 If a new template is needed, contact **@fadi**.
 
-## Database:
-SQLite file: audit_log.db
-Schema defined in schema.sql
+## Database
 
+**SQLite file:** `audit_log.db`  
+**Schema defined in:** `schema.sql`
+
+**Tables:**
+- `recipient_preferences`
+- `audit_log`
 Tables:
 	•	recipient_preferences
 	•	audit_log
