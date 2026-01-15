@@ -100,8 +100,8 @@ If a new template is needed, contact **@fadi**.
 - `recipient_preferences`
 - `audit_log`
 Tables:
-	•	recipient_preferences
-	•	audit_log
+	•	`recipient_preferences`
+	•	`audit_log`
 
 ## Notes
 This service mocks sending behaviour. No real SMS or Email is sent. All messages are recorded for audit and debugging purposes.
