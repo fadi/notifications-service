@@ -60,33 +60,37 @@ curl -X POST http://127.0.0.1:5050/send \
     }
   }'
 ```
-#### Running locally: 
+## Running locally: 
 ```bash 
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python app.py
 ```
-#### Service runs on: 
+## Service runs on: 
 ```code
 http://127.0.0.1:5050
 ```
-#### Health check: 
+## Health check: 
 ```bash 
 http://127.0.0.1:5050/health
 ```
-#### Templates (v1)
+## Templates (v1)
+
 Available templates:
-	•	welcome
-Variables: name, product
-	•	reset_password
-Variables: name, code
-	•	invoice_ready
-Variables: name, invoice_id, total
 
-If a new template is needed, contact @fadi.
+- **welcome**  
+  Variables: `name`, `product`
 
-#### Databse:
+- **reset_password**  
+  Variables: `name`, `code`
+
+- **invoice_ready**  
+  Variables: `name`, `invoice_id`, `total`
+
+If a new template is needed, contact **@fadi**.
+
+## Database:
 SQLite file: audit_log.db
 Schema defined in schema.sql
 
@@ -94,7 +98,7 @@ Tables:
 	•	recipient_preferences
 	•	audit_log
 
-#### Notes
+## Notes
 This service mocks sending behaviour. No real SMS or Email is sent. All messages are recorded for audit and debugging purposes.
 
 
