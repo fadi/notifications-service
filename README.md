@@ -1,8 +1,8 @@
-#Notifications Service (Mock) v1.0
+# Notifications Service (Mock) v1.0
 
 Shared REST microservice for rendering notification templates and auditing simulated SMS/Email sends.
 
-##What this is
+## What this is
 
 This service provides a single /send endpoint that accepts a JSON payload, renders a predefined template using variable data, determines whether the recipient prefers SMS or Email, and records the final message to a local SQLite database (audit_log.db) instead of actually sending it.
 
@@ -27,7 +27,7 @@ Instead, you send the required data to the Notifications service and it will:
 	•	Render the final message using a predefined template
 	•	Record a permanent audit log of the message
 
-###POST /send
+### POST /send
 
 #### Request:
 ```json 
