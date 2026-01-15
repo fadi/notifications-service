@@ -23,10 +23,11 @@ Any module that needs to notify a user or staff member should make an HTTP POST 
 Your system does not need to implement email, SMS, or message formatting logic.
 
 Instead, you send the required data to the Notifications service and it will:
-	•	Choose Email or SMS based on stored user preference
-	•	Render the final message using a predefined template
-	•	Record a permanent audit log of the message
 
+- Choose Email or SMS based on stored user preference  
+- Render the final message using a predefined template  
+- Record a permanent audit log of the message
+  
 ### POST /send
 
 #### Request:
