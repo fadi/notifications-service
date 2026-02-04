@@ -1,4 +1,4 @@
-# Notifications Service (Mock) v1.0
+# Notifications Service (Python - Mock) v1.0
 
 Shared REST microservice for rendering notification templates and auditing simulated SMS/Email sends.
 
